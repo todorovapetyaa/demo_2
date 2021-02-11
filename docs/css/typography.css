@@ -45,6 +45,10 @@ ul {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
+.site-header .page-title {
+    color: #fff;
+}
+
 .hero {
     color: #fff;
     text-align: center;

@@ -15,14 +15,18 @@
 <body class="page-{{page.title | slugify}}">
     <div class="site">
         <header class="site-header">
-            
-           {% include 'navigation.html' %}
+            <section class="logo-nav">
+                <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+
+                {% include navigation.html location = "header" %}
+             </section>
             <h3 class="page-title">{{page.title}}</h3>
             <section class="hero">
                 <h2>The best hero title ever</h2>
                 <p>Sometimes the most rewarding trips are the ones where you can just let go and savor the experience, knowing you are in good hands</p>
             </section> 
         </header>
+
         <main>
             <div class="content">
                 {{ content }}
@@ -31,6 +35,7 @@
             
         </main>
         <footer class="site-footer">
+            {% include navigation.html location = "footer" %}
             <p>{{ site.title}} &copy All rights reserved.</p>
         </footer>
     
