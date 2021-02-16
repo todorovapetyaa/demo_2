@@ -17,7 +17,8 @@ title: Second demo
 email: worlsd_destroyer@abv.bg
 description: 
 destination: docs
-baseurl: "/demo-2" 
+baseurl: "" 
+# baseurl: "/demo-2" 
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Petya
 github_username:  Petya
@@ -38,6 +39,7 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - node_modules
   - node_modules/
   - vendor/bundle/
   - vendor/cache/

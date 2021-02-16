@@ -3,9 +3,12 @@
     <nav class="site-nav loc-{{include.location}}">
         <ul>
             {% assign navigation = site.pages | sort:"order" %}
-            {% for page in navigation %}
-                {% if page.title %}
-                <li class="icon-{{page.title |slugify}}"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+            {% for current_page in navigation %}
+                {% if current_page.title %}
+                
+                <li class="icon-{{current_page.title |slugify}}{% if current_page.url == page.url %} current-page {% endif %}">
+                    <a href="{{site.baseurl}}{{current_page.url}}">{{current_page.title}}</a>
+                </li>
                 {% endif %}
             {% endfor %}
 
