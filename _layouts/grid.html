@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" href="{{site.baseurl}}/css/style.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/grid.css">
+    <link rel="shortcut icon" href="{{site.baseurl}}/icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{site.baseurl}}/icons/favicon.ico" type="image/x-icon">
+    <script>
+        window.addEventListener('load', (event) => {
+            document.querySelector('body').classList.add('loaded');
+});
+    </script>
+</head>
+<body class="page-{{page.title | slugify}}">
+    
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <div class="site">
+        <header class="site-header">
+            <section class="logo-nav">
+                <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+                {% include navigation.html location = "header" %}
+             </section>
+            <h3 class="page-title">{{page.title}}</h3>
+             
+        </header>
+
+        <main>
+            <div class="content">
+                {{ content }}
+            </div>
+           
+        </main>
+        <aside class="side-bar"></aside>
+        <footer class="site-footer">
+             <p>{{ site.title}} &copy All rights reserved.</p>
+        </footer>
+    
+  
+    </div>
+    
+    
+</body>
+</html>

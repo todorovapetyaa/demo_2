@@ -1,0 +1,24 @@
+.site {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto 1fr auto;
+  align-content: stretch;
+  gap: 0.5em;
+  min-height: 100vh; }
+  .site-header, .site-footer {
+    grid-column: 1/-1; }
+  .page-grid .site-header {
+    background: #369;
+    display: grid;
+    min-height: 0; }
+  .page-grid .site-footer {
+    background: #791; }
+  .site main {
+    grid-column: span 8;
+    grid-row: 2;
+    background: lightblue;
+    justify-self: stretch; }
+  .site .side-bar {
+    grid-column: span 4;
+    grid-row: 2;
+    background: #8cbb41; }

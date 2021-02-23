@@ -1,0 +1,40 @@
+$grid-columns: 12;
+
+.site {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, 1fr);
+    grid-template-rows: auto 1fr auto;
+    align-content: stretch;
+    gap: 0.5em;
+    min-height: 100vh;
+
+    &-header,
+    &-footer {
+        grid-column: 1/-1
+    }
+
+    .page-grid &-header {
+        background: #369;
+        display: grid;
+        min-height: 0;
+    }
+
+    .page-grid &-footer {
+        background: #791;
+    }
+
+    main {
+        grid-column: span #{$grid-columns/3*2};
+        grid-row: 2;
+        background: lightblue;
+        justify-self: stretch;
+        
+    }
+    
+    .side-bar {
+        grid-column: span #{$grid-columns/3};
+        grid-row: 2;
+        background: rgb(140, 187, 65);
+    }
+}
+
